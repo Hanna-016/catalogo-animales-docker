@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Catálogo visual de animales: conoce perros, gatos y otros compañeros.">
+  <title>Fauna — Catálogo de animales</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="hero">
+    <nav class="nav">
+      <a class="brand" href="#" aria-label="Fauna, inicio"><span class="brand-mark">✦</span> fauna</a>
+      <a class="nav-link" href="#catalogo">Explorar animales</a>
+    </nav>
+    <div class="hero-content">
+      <p class="eyebrow">UN MUNDO POR DESCUBRIR</p>
+      <h1>Pequeñas vidas,<br><em>grandes historias.</em></h1>
+      <p class="hero-copy">Conoce algunos de los animales que hacen nuestro mundo más especial.</p>
+      <a class="hero-button" href="#catalogo">Ver catálogo <span>↓</span></a>
+    </div>
+    <div class="hero-note">CURIOSIDAD · RESPETO · NATURALEZA</div>
+  </header>
+
+  <main id="catalogo" class="catalog-section">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">NUESTROS FAVORITOS</p>
+        <h2>Conoce la fauna</h2>
+      </div>
+      <p class="section-description">Explora, busca y descubre tu próximo animal favorito.</p>
+    </div>
+
+    <div class="toolbar">
+      <label class="search-box">
+        <span aria-hidden="true">⌕</span>
+        <input id="searchInput" type="search" placeholder="Buscar un animal..." aria-label="Buscar un animal">
+      </label>
+      <div class="filters" role="group" aria-label="Filtrar por tipo">
+        <button class="filter-button active" data-filter="Todos">Todos</button>
+        <button class="filter-button" data-filter="Perro">Perros</button>
+        <button class="filter-button" data-filter="Gato">Gatos</button>
+        <button class="filter-button" data-filter="Silvestre">Silvestres</button>
+      </div>
+    </div>
+
+    <div id="animalGrid" class="animal-grid" aria-live="polite"></div>
+    <p id="emptyMessage" class="empty-message" hidden>No encontramos animales con esa búsqueda.</p>
+  </main>
+
+  <section class="care-strip">
+    <div class="care-icon">♡</div>
+    <div>
+      <p class="eyebrow">UN MENSAJE IMPORTANTE</p>
+      <h2>Todos merecen cuidado y respeto.</h2>
+      <p>Conocer a los animales también es aprender a protegerlos y valorar su lugar en el planeta.</p>
+    </div>
+  </section>
+
+  <footer>
+    <a class="brand footer-brand" href="#"><span class="brand-mark">✦</span> fauna</a>
+    <p>Un catálogo educativo creado para aprender sobre los animales.</p>
+    <span>Proyecto de práctica Docker</span>
+  </footer>
+</body>
+</html>
